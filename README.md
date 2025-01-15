@@ -40,3 +40,48 @@ Use the following command to install all dependencies at once:
 ```bash  
 pip install -r requirements.txt  
 ```
+### **1. Clone the Repository**  
+```bash  
+git clone https://github.com/YOUR_USERNAME/SmartLicensePlateRecognition.git  
+cd SmartLicensePlateRecognition  
+```
+### **2. Set Up YOLOv5**  
+Download and configure YOLOv5:  
+```bash  
+git clone https://github.com/ultralytics/yolov5.git  
+cd yolov5  
+pip install -U -r requirements.txt  
+```
+### **3. Dataset Preparation**  
+Organize your dataset as shown below:  
+```plaintext  
+dataset/  
+├── annotations/  
+│   ├── test/  
+│   ├── train/  
+│   └── validation/  
+├── images/  
+│   ├── test/  
+│   ├── train/  
+│   └── validation/  
+```
+### **4. Annotation Conversion**  
+Convert XML annotation files into YOLO-compatible `.txt` format. A script named `convert_xml_to_txt.py` is included for this purpose. Update the paths in the script to match your local dataset structure before running it:  
+```bash  
+python convert_xml_to_txt.py  
+```
+### **5. Model Training**  
+Train the YOLOv5 model on your custom dataset using the following command:  
+```bash  
+python train.py --img 640 --batch 8 --epochs 50 --data data.yaml --weights yolov5s.pt --device 0  
+```
+--img: Input image size (default 640).
+--batch: Number of images per batch.
+--epochs: Total training epochs.
+--data: Path to your dataset configuration file.
+--weights: Pretrained model weights.
+--device: GPU/CPU for training (0 for GPU, cpu for CPU)
+
+## 🧪 **Testing & Evaluation**  
+(Coming Soon)  
+The testing pipeline will evaluate the model's performance on unseen images and videos to measure metrics like accuracy, precision, and recall.
