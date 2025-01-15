@@ -1,0 +1,6 @@
+train: /Users/aryansingh/Desktop/Fall 2024/HTML&CSS Prep/License Plate Number Detection/archive/images/train # Path to training images
+val: /Users/aryansingh/Desktop/Fall 2024/HTML&CSS Prep/License Plate Number Detection/archive/images/validation # Path to validation images
+
+nc: 1  # Number of classes
+names: ['license_plate']  # List of class names
+
