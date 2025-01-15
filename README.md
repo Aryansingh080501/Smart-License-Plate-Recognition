@@ -66,9 +66,9 @@ dataset/
 │   └── validation/  
 ```
 ### **4. Annotation Conversion**  
-Convert XML annotation files into YOLO-compatible `.txt` format. A script named `convert_xml_to_txt.py` is included for this purpose. Update the paths in the script to match your local dataset structure before running it:  
+Convert XML annotation files into YOLO-compatible `.txt` format. A script named `xmltotxtconvert.py` is included for this purpose. Update the paths in the script to match your local dataset structure before running it:  
 ```bash  
-python convert_xml_to_txt.py  
+python xmltotxtconvert.py  
 ```
 ### **5. Model Training**  
 Train the YOLOv5 model on your custom dataset using the following command:  
