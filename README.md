@@ -75,12 +75,12 @@ Train the YOLOv5 model on your custom dataset using the following command:
 ```bash  
 python train.py --img 640 --batch 8 --epochs 50 --data data.yaml --weights yolov5s.pt --device 0  
 ```
---img: Input image size (default 640)
---batch: Number of images per batch
---epochs: Total training epochs
---data: Path to your dataset configuration file
---weights: Pretrained model weights
---device: GPU/CPU for training (0 for GPU, cpu for CPU)
+- --img: Input image size (default 640)
+- --batch: Number of images per batch
+- --epochs: Total training epochs
+- --data: Path to your dataset configuration file
+- --weights: Pretrained model weights
+- --device: GPU/CPU for training (0 for GPU, cpu for CPU)
 
 ## 🧪 **Testing & Evaluation**  
 (Coming Soon)  
